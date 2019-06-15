@@ -1,8 +1,4 @@
-<div class="login_date">
-  <h1>仮)最近のログイン情報</h1>
-</div>
-
-<div class="create_user">
+<div class="new_create_user">
 <h1>新規アカウントの作成</h1>
 <p>無料でご利用いただけます。</p>
 
@@ -15,7 +11,9 @@
     <div class="password">
       <%= f.password_field :password,
                            placeholder: "パスワード",size: 62 %>
-      <br>
+    </div>
+
+    <div class="re_password">
       <%= f.password_field :password_confirmation,
                             placeholder: "パスワードを再入力",size: 62 %>
     </div>
