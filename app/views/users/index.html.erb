@@ -3,10 +3,10 @@
 </div>
 
 <div class="create_user">
-<h1>新規アカウントの作成</h1>
-<p>無料でご利用いただけます。</p>
+  <h1>新規アカウントの作成</h1>
+  <p>無料でご利用いただけます。</p>
 
-<%= form_with(model:@user,local: true) do |f| %>  <!-- js読み込みlocalは後ほど変更する -->
+  <%= form_with(model:@user,local: true) do |f| %>  <!-- js読み込みlocalは後ほど変更する -->
     <div class="name_email">
       <%= f.text_field :name,placeholder: "お名前",size: 30 %>
       <%= f.email_field :email,placeholder: "メールアドレス",size: 30 %>
@@ -17,9 +17,9 @@
                            placeholder: "パスワード",size: 62 %>
       <br>
       <%= f.password_field :password_confirmation,
-                            placeholder: "パスワードを再入力",size: 62 %>
+                           placeholder: "パスワードを再入力",size: 62 %>
     </div>
 
-  <%= f.submit "アカウント登録" ,class: "submit btn btn-success" %>
+    <%= f.submit "アカウント登録" ,class: "submit btn btn-success" %>
 
-<% end %>
+  <% end %>

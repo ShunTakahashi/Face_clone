@@ -1,3 +1,35 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.login_date{
+  float: left;
+  width: 60%;
+}
+
+.login_date h1{
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.create_user{
+  width: 40%;
+  float: right;
+}
+
+.create_user h1{
+  font-weight: bold;
+}
+
+.name_email{
+  display: block;
+  margin: 10px;
+}
+
+.password{
+  display: block;
+  margin: 10px;
+}
+
+.submit{
+  margin: 10px;
+}
