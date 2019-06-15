@@ -1,4 +1,16 @@
 <div class="new_create_user">
+
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "件のエラーがあります。") %></h2>
+      <ul>
+        <% @user.errors.full_messages.each do |message| %>
+          <li class="errors_msg"><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
 <h1>新規アカウントの作成</h1>
 <p>無料でご利用いただけます。</p>
 
