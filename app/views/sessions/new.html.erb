@@ -1,0 +1,16 @@
+<div class="new_create_user">
+
+  <h1>ログイン</h1>
+  <%= form_with(scope: :session, url: sessions_path, local: true) do |f| %>
+    <div class="name_email">
+      <%= f.email_field :email,placeholder: "メールアドレス",size: 30 %>
+    </div>
+
+    <div class="name_password">
+      <%= f.password_field :password,
+                           placeholder: "パスワード",size: 30 %>
+    </div>
+
+    <%= f.submit "ログイン" ,class: "submit btn btn-success" %>
+
+  <% end %>

@@ -11,13 +11,26 @@
       <ul class="top_menu clearfix">
         <li class="li_top li_logo"><a href="/users">FacebookClone</a></li>
 
-       <li class="li_top"><a href="/users/new">会員登録</a></li>
-       <li class="li_top"><a href="#">ログイン</a></li>
+        <% if logged_in? %>
+          <li class="li_top">
+            <%= link_to "ログアウト", session_path(current_user.id), method: :delete %>
+          </li>
+          <li class="li_top"><a href="/users/show">ユーザー情報</a></li>
+          <li class="li_top"><a href="#">投稿</a></li>
+        <% else %>
+          <li class="li_top"><a href="/users/new">会員登録</a></li>
+          <li class="li_top"><a href="/sessions/new">ログイン</a></li>
+        <% end %>
       </ul>
     </header>
 
   <body>
-    <%= yield %>
+
+  <% flash.each do |key, value| %>
+    <%= content_tag(:div, value, class: "#{key}") %>
+  <% end %>
+
+  <%= yield %>
   </body>
 
 
