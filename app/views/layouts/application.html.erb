@@ -9,15 +9,16 @@
   <div class="container">
     <header class="header">
       <ul class="top_menu clearfix">
-        <li class="li_top li_logo"><a href="/users">FacebookClone</a></li>
 
         <% if logged_in? %>
+          <li class="li_top li_logo"><a href="##">FacebookClone</a></li>
           <li class="li_top">
             <%= link_to "ログアウト", session_path(current_user.id), method: :delete %>
           </li>
-          <li class="li_top"><a href="/users/show">ユーザー情報</a></li>
-          <li class="li_top"><a href="#">投稿</a></li>
+          <li class="li_top"><a href="/users/index">ユーザー情報</a></li>
+          <li class="li_top"><a href="/blogs/new">投稿</a></li>
         <% else %>
+          <li class="li_top li_logo"><a href="/users">FacebookClone</a></li>
           <li class="li_top"><a href="/users/new">会員登録</a></li>
           <li class="li_top"><a href="/sessions/new">ログイン</a></li>
         <% end %>
@@ -25,10 +26,13 @@
     </header>
 
   <body>
+  <div class="info">
 
-  <% flash.each do |key, value| %>
-    <%= content_tag(:div, value, class: "#{key}") %>
-  <% end %>
+    <% flash.each do |key, value| %>
+      <%= content_tag(:div, value, class: "#{key}") %>
+    <% end %>
+
+  </div>
 
   <%= yield %>
   </body>

@@ -1,0 +1,16 @@
+<table>
+  <tbody>
+  <% @blogs.each do |blog| %>
+    <tr>
+      <td><%= blog.content %></td>
+      <td><%= link_to '詳細', twt_path(tweet.id) %></td>
+      <td><%= link_to '編集', edit_twt_path(tweet.id) %></td>
+      <td><%= link_to '削除', twt_path(tweet.id), method: :delete, data: { confirm: '本当に削除してもよろしいですか?' } %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tweet', new_twt_path %>
