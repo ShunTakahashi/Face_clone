@@ -14,7 +14,7 @@
 <h1>新規アカウントの作成</h1>
 <p>無料でご利用いただけます。</p>
 
-<%= form_with(model:@user,local: true) do |f| %>  <!-- js読み込みlocalは後ほど変更する -->
+<%= form_with(model:@user,local: true) do |f| %>
     <div class="name_email">
       <%= f.text_field :name,placeholder: "お名前",size: 30 %>
       <%= f.email_field :email,placeholder: "メールアドレス",size: 30 %>

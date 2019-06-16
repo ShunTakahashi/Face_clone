@@ -15,7 +15,9 @@
           <li class="li_top">
             <%= link_to "ログアウト", session_path(current_user.id), method: :delete %>
           </li>
-          <li class="li_top"><a href="/users/index">ユーザー情報</a></li>
+          <li class="li_top">
+            <%= link_to "ユーザー情報", user_path(current_user.id) %>
+          </li>
           <li class="li_top"><a href="/blogs/new">投稿</a></li>
         <% else %>
           <li class="li_top li_logo"><a href="/users">FacebookClone</a></li>
