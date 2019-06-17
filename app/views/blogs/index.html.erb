@@ -5,10 +5,16 @@
     <% @blogs.each do |blog| %>
       <tr>
         <td class="show_td"><%= blog.content %></td>
-        <td class="show_td"><%= link_to '詳細', blog_path(blog.id) %></td>
-        <td class="show_td"><%= link_to '編集', edit_blog_path(blog.id) %></td>
+
+        <td class="show_td"><%= link_to '詳細', blog_path(blog.id),
+                                        class: "btn btn-primary" %></td>
+
+        <td class="show_td"><%= link_to '編集', edit_blog_path(blog.id),
+                                        class: "btn btn-warning" %></td>
+
         <td class="show_td"><%= link_to '削除', blog_path(blog.id), method: :delete ,
-                       data: { confirm: '本当に削除してもよろしいですか?' } %></td>
+                                        data: { confirm: '本当に削除してもよろしいですか?' },
+                                        class: "btn btn-danger" %></td>
        </tr>
      <% end %>
      </tbody>
