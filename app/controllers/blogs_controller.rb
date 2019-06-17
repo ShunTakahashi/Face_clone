@@ -37,6 +37,14 @@ class BlogsController < ApplicationController
     redirect_to blogs_path,notice: "投稿を削除しました。"
   end
 
+  def update
+    if @blog.update(blog_params)
+      redirect_to blogs_path,notice: "編集が完了しました"
+    else
+      render 'edit'
+    end
+  end
+
   private
 
   def blog_params
