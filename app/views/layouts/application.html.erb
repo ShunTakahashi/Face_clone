@@ -11,7 +11,7 @@
       <ul class="top_menu clearfix">
 
         <% if logged_in? %>
-          <li class="li_top li_logo"><a href="##">FacebookClone</a></li>
+          <li class="li_top li_logo"><a href="/blogs">FacebookClone</a></li>
           <li class="li_top">
             <%= link_to "ログアウト", session_path(current_user.id), method: :delete %>
           </li>
