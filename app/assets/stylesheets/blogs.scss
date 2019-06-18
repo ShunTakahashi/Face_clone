@@ -16,21 +16,47 @@
   line-height: 20px;
 }
 
-.show_page{
-  padding-top: 30px;
+table{
+  display: block;
   text-align: center;
-}
-
-.index_page{
   margin: auto;
-  text-align: center;
-}
-
-tbody{
-  text-align: center;
+  table-layout: fixed;
 }
 
 .show_td{
   padding: 10px;
   text-align: center;
+}
+
+.index_table{
+  border-collapse: collapse;
+  padding-top: 30px;
+  padding-left: 30%;
+  display: block;
+  text-align: center;
+  table-layout: fixed;
+}
+
+.index_table tr{
+  height: 5rem;
+}
+
+.index_table th{
+  color: black;
+  border:solid 2px #0e0e0e
+}
+
+table th {
+  width: 300px;
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+.index_table td{
+  width: auto;
+  padding-left: 1rem;
+  border:solid 2px #0e0e0e;
 }

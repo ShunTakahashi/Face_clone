@@ -2,11 +2,11 @@
 <html>
   <head>
     <title>FacebookClone</title>
+    <link rel="stylesheet" href="./CSS/normalize.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
-  <div class="container">
     <header class="header">
       <ul class="top_menu clearfix">
 
@@ -26,22 +26,23 @@
         <% end %>
       </ul>
     </header>
+    <body>
+    <div class="container">
+      <div class="info">
 
-  <body>
-  <div class="info">
+        <% flash.each do |key, value| %>
+         <%= content_tag(:div, value, class: "#{key}") %>
+        <% end %>
 
-    <% flash.each do |key, value| %>
-      <%= content_tag(:div, value, class: "#{key}") %>
-    <% end %>
+      </div>
 
-  </div>
+        <%= yield %>
+    </div>
+    </body>
 
-  <%= yield %>
-  </body>
-
-
-  </div>
   <footer class="footer">
     <p>FacebookClone 2019</p>
   </footer>
+  </div>
+
 </html>
