@@ -3,14 +3,17 @@
   <br>
 <%= form_with(model: @blog, url: blogs_path , local: true) do |form| %>
   <%= form.hidden_field :content %>
+  <%= form.hidden_field :image %>
 
   <h2>投稿内容</h2>
   <p><%= @blog.content %></p>
+    <%= @blog.image %>
   <%= form.submit  "投稿する。" , class: "submit btn btn-success" %>
 <% end %>
 
 <%= form_with(model: @blog , url: new_blog_path,local: true,method: 'get') do |form| %>
   <%= form.hidden_field :content %>
+  <%= form.hidden_field :image %>
   <%= form.submit '戻る',name: 'back' %>
 <% end %>
 </div>

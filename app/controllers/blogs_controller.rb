@@ -1,5 +1,5 @@
 class BlogsController < ApplicationController
-  before_action:set_blog,only:[:edit,:update,:show,:destroy]
+  before_action :set_blog,only:[:edit,:update,:show,:destroy]
 
   def index
     @blogs = Blog.all.order(id: "DESC")
@@ -48,7 +48,7 @@ class BlogsController < ApplicationController
   private
 
   def blog_params
-    params.require(:blog).permit(:content)
+    params.require(:blog).permit(:content,:image,:image_cache)
   end
 
   def set_blog

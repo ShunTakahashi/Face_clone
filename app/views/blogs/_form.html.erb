@@ -10,11 +10,15 @@
     </div>
   <% end %>
 
-<div>
   <%= form.text_area :content ,placeholder: "投稿する内容" ,id: "textarea" %>
+  <%= image_tag(@blog.image.url) if @blog.image.url %>
+  <div class="image">
+    <%= form.file_field :image %>
+  </div>
+  <%= form.hidden_field :image_cache %>
+
   <br>
   <%= form.submit "投稿する" ,class: "btn btn-primary" %>
-</div>
 <% end %>
 
 
