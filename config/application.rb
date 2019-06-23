@@ -11,5 +11,6 @@ module FaceClone
 
     config.time_zone = 'Tokyo'
     config.active_record.default_timezone = :local
+    config.assets.initialize_on_precompile = false
   end
 end
