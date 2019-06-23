@@ -94,7 +94,7 @@ footer {
     list-style: none;
 }
 
-.info{
-    text-align: center;
+.info .notice{
     font-size: 3rem;
+    text-align: center;
 }

@@ -18,7 +18,11 @@
           <li class="li_top">
             <%= link_to "ユーザー情報", user_path(current_user.id) %>
           </li>
-          <li class="li_top"><a href="/blogs/new">投稿</a></li>
+          <li class="li_top"><a href="/blogs/new">投稿</a>
+          </li>
+          </li>
+          <li class="li_top"><a href="/blogs">投稿一覧</a>
+          </li>
         <% else %>
           <li class="li_top li_logo"><a href="/users">FacebookClone</a></li>
           <li class="li_top"><a href="/users/new">会員登録</a></li>
